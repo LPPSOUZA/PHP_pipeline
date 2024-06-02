@@ -6,12 +6,12 @@ pipeline {
             stages {
                 stage('Sequencial 1') {
                     steps {
-                     "php --version"
+                    bat "php --version"
                     }
                 }
                 stage('Secuencial 2') {
                     steps {
-                       "php hello.php"
+                     bat "php hello.php"
                     }
                 }
             }
