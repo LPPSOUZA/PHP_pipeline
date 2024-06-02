@@ -1,15 +1,20 @@
 pipeline {
-  agent any
-  stages {
-    stage('verify version') {
-      steps {
-          "php --version"
-      }
+    agent any
+    stages {
+        stage('Sequencial') {
+		   
+            stages {
+                stage('Sequencial 1') {
+                    steps {
+                       echo   "php --version"
+                    }
+                }
+                stage('Secuencial 2') {
+                    steps {
+                        php hello.php
+                    }
+                }
+            }
+        }
     }
-    stage('hello') {
-      steps {
-         "php hello.php"
-      }
-    }
-  }
 }
