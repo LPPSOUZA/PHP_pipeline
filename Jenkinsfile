@@ -7,7 +7,6 @@ pipeline {
                 stage('Sequencial 1') {
                     steps {
                     	bat "php --version"
-			bat  "dir"
                     }
                 }
                 stage('Secuencial 2') {
